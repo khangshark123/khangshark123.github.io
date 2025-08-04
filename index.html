@@ -2,8 +2,10 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Khang Shark - Trang cá nhân</title>
+  <title>khangshark123 - Trang cá nhân</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Thêm thư viện Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
     body {
       margin: 0;
@@ -14,20 +16,33 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       min-height: 100vh;
       text-align: center;
+      padding-top: 60px;
+      overflow-x: hidden;
     }
+
     h1 {
       font-size: 3em;
       margin-bottom: 10px;
+      min-height: 60px;
     }
+
+    .typed-cursor {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #fff;
+    }
+
     p {
       font-size: 1.2em;
       max-width: 500px;
+      margin-bottom: 20px;
     }
+
     .button {
-      margin-top: 20px;
+      margin: 15px;
       padding: 10px 20px;
       font-size: 1em;
       border: none;
@@ -37,22 +52,83 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
+
     .button:hover {
       background-color: #dcdcdc;
     }
+
+    iframe {
+      margin: 30px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .links {
+      margin-top: 20px;
+      line-height: 1.8;
+      font-size: 1em;
+    }
+
+    a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     footer {
-      position: absolute;
-      bottom: 10px;
+      margin-top: 40px;
       font-size: 0.9em;
       color: #ccc;
+    }
+
+    /* Ẩn iframe nhạc nền */
+    .hidden-audio {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
     }
   </style>
 </head>
 <body>
-  <h1>👋 Chào bạn!</h1>
-  <p>Mình là <strong>Khang</strong> — chào mừng bạn đến với trang cá nhân đầu tiên của mình.</p>
-  <button class="button" onclick="alert('Cảm ơn bạn đã ghé thăm!')">Bấm vào đây nè</button>
-  
-  <footer>&copy; 2025 • Làm bởi Khang 🦈</footer>
+
+  <h1><span id="typed-text"></span></h1>
+
+  <p>Mình là <strong>Khang</strong> — Khangshark123 profile 🦈</p>
+
+  <!-- Video hiển thị chính -->
+  <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/dr147S_qAZE?autoplay=1&mute=0&loop=1&playlist=dr147S_qAZE" 
+    title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+
+  <!-- Nhạc nền ẩn -->
+  <iframe class="hidden-audio"
+    src="https://www.youtube.com/embed/0tFUfuEhh28?autoplay=1&mute=0&loop=1&playlist=0tFUfuEhh28"
+    allow="autoplay">
+  </iframe>
+
+  <button class="button" onclick="alert('Cảm ơn bạn đã ghé thăm profile của tôi...!')">Click here...!</button>
+
+  <div class="links">
+    📧 Gmail: <a href="mailto:khangsadboy2607@gmail.com">khangsadboy2607@gmail.com</a><br>
+    📘 Facebook: <a href="https://www.facebook.com/tuan.khang.374463/" target="_blank">facebook.com/tuan.khang.374463</a><br>
+    💬 Discord: <strong>khangshark123</strong>
+  </div>
+
+  <footer>&copy; 2025 • Create by Tuan Khang 🦈💢</footer>
+
+  <script>
+    new Typed("#typed-text", {
+      strings: ["Wellcomm !!!", "Chào mừng đến với profile KhangShark123 🦈", "Hãy ở lại chơi lâu nhé!"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
 </body>
 </html>
